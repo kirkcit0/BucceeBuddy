@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable, use_build_context_synchronously
+
 import 'dart:convert';
 
 import 'package:app_large_project/components/navbar.dart';
@@ -21,6 +23,7 @@ class MapPage extends StatefulWidget {
 }
 
 class _MapPageState extends State<MapPage> {
+  // ignore: unused_field
   Set<Marker> _markers = {};
   Map<String, dynamic> userData = {};
   late BitmapDescriptor markerIcon;
@@ -122,7 +125,6 @@ class _MapPageState extends State<MapPage> {
       if(locationVisited){
         marker = markerVisitedIcon;
       }
-      // print(locationVisited);
 
       return Marker(
         markerId: MarkerId(data['name']),
